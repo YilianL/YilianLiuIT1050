@@ -1,0 +1,22 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+  Console.Write("Enter a number: ");
+  var num1 = Console.ReadLine();
+  int x = Convert.ToInt32(num1);
+  Console.Write("Enter another number: ");
+  var num2 = Console.ReadLine();
+  int y = Convert.ToInt32(num2);
+  int sum = (x+y);
+  Console.WriteLine("Sum = " + sum);
+  int diff = (x-y);
+  Console.WriteLine("Diff = " + diff);
+  int product = (x*y);
+  Console.WriteLine("Product = " + product);
+  int quotient = (x/y);
+  Console.WriteLine("Quotient = " + quotient);
+  int remainder = (x % y);
+  Console.WriteLine("Remainder = " + remainder);
+  }
+}
