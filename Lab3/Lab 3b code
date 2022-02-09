@@ -1,0 +1,40 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Enter salesperson name");
+    var name = Console.ReadLine();
+    Console.WriteLine("Enter sales amount");
+    double amt = Convert.ToDouble(Console.ReadLine());
+    double sc = 0.09*amt +200;
+    Console.WriteLine("Sales Commission for " + name + " is $" + sc);
+    if ( amt >= 15000)
+    {
+      Console.WriteLine("Performance is outstanding.");
+    }
+    else if ( amt >= 10000 && amt <= 14999)
+    {
+      Console.WriteLine("Performance is excellent.");
+    }
+    else if ( amt >= 5000 && amt <= 9999)
+    {
+      Console.WriteLine("Performance is good.");
+    }
+    else if ( amt >= 3000 && amt <= 4999)
+    {
+      Console.WriteLine("Performance is average.");
+    }
+    else if ( amt >= 0 && amt <= 2999)
+    {
+      Console.WriteLine("Performance is poor."); 
+    }
+    else
+    {
+
+    }
+
+
+
+
+  }
+}
