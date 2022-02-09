@@ -1,0 +1,22 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Enter the temperature in Celcius");
+    double tempC = Convert.ToDouble(Console.ReadLine());
+    double tempF = (tempC*9/5)+32;
+    Console.WriteLine("Farenheit equivalent for " + tempC + " degree Celcius is " + tempF);
+    if (tempF > 212)
+    {
+      Console.WriteLine("This temperature is above boiling temperature of 212 Farenheit.");
+    }
+    else if (tempF < 32)
+    {
+      Console.WriteLine("This temperature is below freezing temperature of 32 degree Farenheit.");
+    }
+    else
+    {
+
+    }
+  }
+}
