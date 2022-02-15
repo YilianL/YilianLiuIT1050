@@ -1,0 +1,25 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+  
+  Console.WriteLine("Enter the number of the car");
+  int number = Convert.ToInt32(Console.ReadLine());
+  int counter = 1;
+  double totalspeed = 0;
+  do
+  {
+    Console.WriteLine("Enter the Distance covered by car #" + counter);
+    double distance = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("Enter the time taken by car # " + counter);
+    double time = Convert.ToDouble(Console.ReadLine());
+    double speed = distance/time;
+    Console.WriteLine("The speed of this car is " + speed + " miles per hour.");
+    totalspeed =totalspeed +speed;
+    counter++;
+  }while(counter < (number+1));
+  double average = (totalspeed/number);
+  Console.WriteLine("The average speed of the cars are " + average + " miles per hour.");
+  
+  }
+}
