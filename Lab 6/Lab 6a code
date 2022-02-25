@@ -1,0 +1,24 @@
+using System;
+using System.Linq;
+
+class Program {
+  public static void Main (string[] args) {
+    double[] Celsius = new double [7];
+    double[] Fahrenheit = new double [7];
+    for(int temp = 0; temp < 7; temp++)
+    {
+      Console.WriteLine("Enter the temperature in Celsius");
+      Celsius[temp] = Convert.ToDouble(Console.ReadLine());
+      Fahrenheit [temp] = (Celsius[temp]*1.8)+32;
+    }
+    Array.Reverse(Fahrenheit);
+    Console.WriteLine("Temperature in Fahrenheit");
+    foreach(double tF in Fahrenheit)
+    {
+      Console.WriteLine(tF);
+    }
+    double sum = Fahrenheit.Sum();
+    double average = sum/7; 
+    Console.WriteLine("Average weekly temperature is " + average + " degree Fahrenheit.");
+  }
+}
