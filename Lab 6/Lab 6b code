@@ -1,0 +1,44 @@
+using System;
+using System.Linq;
+class Program {
+  public static void Main (string[] args) {
+  int [] OddNum= new int[10];
+  int [] EvenNum= new int[10];
+  int x=0;
+  int y=0;
+  for(int i=0;i<10;i++)
+  {
+    Console.WriteLine("Enter the number");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (num % 2 == 0)
+    {
+      EvenNum[x]=num;
+      x++;
+    }
+    else
+    {
+      OddNum[y]=num;
+      y++;
+    }
+  }//finsih splitting
+  
+  Console.WriteLine("The odd numbers are");
+  Array.Reverse(OddNum);
+  int sum1 = OddNum.Sum();
+  for(int a=0;a<10;a++)
+  {
+    Console.WriteLine(OddNum[a]);
+  }
+  Console.WriteLine("The sum of the odd numbers is " + sum1);
+  //odd numbers calculations
+  Console.WriteLine("The even numbers are");
+  Array.Sort(EvenNum);
+  int sum2 = EvenNum.Sum();
+  for(int b=0;b<10;b++)
+  {
+    Console.WriteLine(EvenNum[b]);
+  }
+  Console.WriteLine("The sum of the even numbers is " + sum2);
+  //even numbers calculation
+ }
+}
