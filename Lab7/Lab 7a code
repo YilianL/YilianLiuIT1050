@@ -1,0 +1,36 @@
+using System;
+
+class Program {
+  public static double CalculateCharges(int hrs)
+  {
+    double fee =0;
+    fee = 2 + (0.5*(hrs-3));
+    if (hrs <= 3)
+    {
+      fee =2;
+    }
+    else if (fee >10)
+    {
+      fee =10;
+    }
+    else{}
+    return fee;
+  }
+  public static void Main (string[] args) {
+    string ans = "yes";
+    int hours;
+    double charge;
+    do
+    {
+      Console.WriteLine("Enter the hours parked by the customer");
+      hours = Convert.ToInt32(Console.ReadLine());
+      charge = CalculateCharges(hours);
+      Console.WriteLine("The total parking charge is $" + charge);
+      Console.WriteLine("Is there any more customer?");
+      ans = Console.ReadLine();
+    } while(ans != "no");
+    
+    
+    
+  }
+}
