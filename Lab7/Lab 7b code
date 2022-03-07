@@ -1,0 +1,23 @@
+using System;
+
+class Program {
+  public static int IntegerPower(int bas, int exponent)
+  {
+    int result =1;
+    for (int i=0;i<exponent;i++)
+    {
+      result= result* bas;
+    }
+    return result;
+  }
+  public static void Main (string[] args) {
+    Console.WriteLine ("Enter the base number");
+    int b = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Enter the exponent number");
+    int e =Convert.ToInt32(Console.ReadLine());
+    int r;
+    r = IntegerPower(b,e);
+    Console.WriteLine("The final value is " + r);
+    
+  }
+}
