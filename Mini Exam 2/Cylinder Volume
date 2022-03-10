@@ -10,8 +10,8 @@ namespace ConsoleApp1
     {
     static double CylinderVolume (double radius, double height)
     {
-      Double volumn = 3.14*radius*radius*height;
-      return volumn;
+      Double volume = 3.14*radius*radius*height;
+      return volume;
     }
     static void Main(string[] args)
     {
@@ -21,7 +21,7 @@ namespace ConsoleApp1
         double h = Convert.ToDouble(Console.ReadLine());
         double v;
         v = CylinderVolume(r,h);
-        Console.WriteLine("The volumn of the cylinder is " + v);
+        Console.WriteLine("The volume of the cylinder is " + v);
     }
     }
 }
