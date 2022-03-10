@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+    static double DetermineHypotenuse(double side1, double side2)
+    {
+     double hypotenuse = Math.Sqrt((side1 * side1) + (side2*side2));
+     return hypotenuse;
+    }
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the length of side 1");
+        double s1 = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Enter the length of side 2");
+        double s2 = Convert.ToDouble(Console.ReadLine());
+        double h;
+        h = DetermineHypotenuse(s1,s2);
+        Console.WriteLine("The hypotenuse of the triange is " + h);
+
+    }
+    }
+}
