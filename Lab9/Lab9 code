@@ -1,0 +1,58 @@
+for the main.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+    static void Main(string[] args)
+    {
+    Em Constructor = new Em();
+    Constructor.Intro();
+    Em em1 = new Em("John", "Smith", "1234", 45);
+    em1.Intro();
+    }
+    }
+}
+for the Em.cs
+using System;
+class Em {
+  private string firstname;
+  private string lastname;
+  private string id;
+  private int age;
+  private string address;
+  private string phonenumber;
+  private string title;
+  private double yearlysalary;
+  private string employmentstatus;
+
+  public Em()
+  {
+    firstname="Unknown";
+    lastname="Unknown";
+    id="Unknown";
+    age=0;
+    employmentstatus="active";
+  }
+  public Em(string fn, string ln, string id2, int age2)
+  {
+    firstname=fn;
+    lastname=ln;
+    id=id2;
+    age=age2;
+    employmentstatus="active";
+  }
+  public void Intro()
+  {
+    Console.WriteLine("My first name is " + firstname);
+    Console.WriteLine("My last name is " + lastname);
+    Console.WriteLine("My id is " + id);
+    Console.WriteLine("My age is " + age);
+    Console.WriteLine("The employment status is " + employmentstatus);
+  }
+}
