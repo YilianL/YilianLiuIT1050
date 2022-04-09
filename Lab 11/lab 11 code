@@ -1,0 +1,58 @@
+## for the faculty.cs
+using System;
+
+class Faculty : Person
+{
+  public string Id {get;set;}
+  public string Title {get;set;}
+  public DateTime DateOfEmployment {get;set;}
+  public string Employer {get;set;}
+  public double YearlySalary {get;set;}
+  public bool Tenured {get;set;}
+//properties
+  public Faculty() : base()
+  {
+    Title = "Instructor";
+  }
+
+  public Faculty(string fname, string lname) : base(fname, lname)
+  {
+    Title = "Instructor";
+  }
+//constructors
+  public void GrantTenure()
+  {
+    if(((DateTime.Today.Year) - (DateOfEmployment.Year)) >= 5)
+    {
+      Tenured = true;
+    }
+    else
+    {
+      Tenured = false;
+    }
+  }
+
+  public void Promote()
+  {
+    if(Title == "Professor")
+    {Console.WriteLine("No more promotion possible.");}
+    else if ((((DateTime.Today.Year) - (DateOfEmployment.Year)) >10) && (Title == "Associate Professor"))
+    { Title = "Professor";
+      Console.WriteLine("Faculty promoted to Professor Rank.");}
+    else if ((((DateTime.Today.Year) - (DateOfEmployment.Year)) >5) && (Title == "Assistant Professor"))
+    { Title = "Associate Professor";
+      Console.WriteLine("Faculty promoted to Associate Professor Rank.");}
+    else if ((((DateTime.Today.Year) - (DateOfEmployment.Year)) >2) && (Title == "Instructor"))
+    { Title = "Assistant Professor";
+      Console.WriteLine("Faculty promoted to Assistant Professor Rank.");}
+    else
+    { Console.WriteLine("You are not eligible for promotion.");}
+  }
+
+  public override void Intro()
+  {
+    base.Intro();
+    Console.WriteLine("I work as " + Title + " at Tri-C since " + DateOfEmployment.Year);
+  }
+//methods
+}
