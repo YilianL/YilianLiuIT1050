@@ -25,10 +25,12 @@ class Faculty : Person
     if(((DateTime.Today.Year) - (DateOfEmployment.Year)) >= 5)
     {
       Tenured = true;
+      Console.WriteLine("true");
     }
     else
     {
       Tenured = false;
+      Console.WriteLine("false");
     }
   }
 
